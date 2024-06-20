@@ -1,14 +1,19 @@
 
-import data from "../data.json";
-import logo from "../images/logo.png";
+import Header from "./Header";
+import{BrowserRouter,Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Appartement from "./Appartement";
 const App = () => {
   return (
-    <div>
-      <img src={logo} alt="logo" />
-      <a>Acceuil</a>
-      <a>A Propos</a>
-
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="appartement/:id" element={<Appartement/>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

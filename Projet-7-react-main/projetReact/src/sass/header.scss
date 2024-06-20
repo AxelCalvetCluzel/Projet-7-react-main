@@ -1,3 +1,29 @@
 .header {
+    display: flex;
     color: blue;
+    justify-content: space-between;
+    background-color: beige;
+
+    nav {
+        ul {
+            display: flex;
+
+            a {
+                text-decoration: none;
+                color: blue;
+
+                &.underline {
+                    text-decoration: underline;
+                }
+
+            }
+
+            li {
+                list-style: none;
+                margin: 0 10px;
+            }
+        }
+    }
+
+
 }
