@@ -1,0 +1,12 @@
+$police: "Montserrat", sans-serif;
+
+@mixin montserrat-style($weight) {
+  font-family: $police;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-style: normal;
+}
+
+.custom-element {
+  @include montserrat-style(400);
+}

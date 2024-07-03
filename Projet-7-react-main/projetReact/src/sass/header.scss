@@ -1,28 +1,48 @@
+@use "../sass/variable_mixin/mixins.scss" as mixins;
+
 .header {
+    @include mixins.montserrat-style(500);
     display: flex;
-    color: blue;
     justify-content: space-between;
-    background-color: beige;
+    margin: 45px 100px;
 
-    nav {
-        ul {
-            display: flex;
+    @media (max-width: 768px) {
+        margin: 20px 20px 27px 20px;
+    }
 
-            a {
-                text-decoration: none;
-                color: blue;
+    .logoKaza {
+        width: 210.322px;
+        height: 68px;
 
-                &.underline {
-                    text-decoration: underline;
-                }
-
-            }
-
-            li {
-                list-style: none;
-                margin: 0 10px;
-            }
+        @media (max-width: 768px) {
+            width: 145px;
+            height: 46.881px;
         }
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        gap: 57px;
+
+        @media (max-width: 768px) {
+            gap: 26px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+
+        &.underline {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
     }
 
 
