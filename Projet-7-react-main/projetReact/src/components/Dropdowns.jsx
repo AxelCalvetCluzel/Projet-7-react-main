@@ -7,7 +7,9 @@ const Dropdowns = () => {
       <div className="bannerAbout">
         <img className="img2" src={bannerAbout} alt="Seconde bannière" />
       </div>
+      
     </div>
+    
   );
 };
 

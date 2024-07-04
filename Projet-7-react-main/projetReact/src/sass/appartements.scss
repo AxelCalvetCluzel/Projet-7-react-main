@@ -1,3 +1,6 @@
+@use "../sass/variable_mixin/mixins.scss" as mixins;
+@use "../sass/variable_mixin/variables.scss" as variables;
+
 .pictures {
     img {
         width: 200px;
@@ -6,4 +9,118 @@
         border-radius: 25px;
 
     }
+}
+
+.appartement {
+    margin: 0px 100px;
+
+    @media (max-width: 1024px) {
+        margin: 0px 20px;
+    }
+}
+
+.containerInfos {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+    }
+}
+
+.firstInfos {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    @include mixins.montserrat-style(500);
+    color: variables.$saumon;
+    font-size: 36px;
+    margin: 30px 0px 0px 0px;
+
+    @media (max-width: 1024px) {
+        margin-top: 15px;
+    }
+
+    @media (max-width: 425px) {
+        font-size: 18px;
+
+    }
+}
+
+p {
+    @include mixins.montserrat-style(500);
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    line-height: 142.6%;
+
+    @media (max-width: 1024px) {
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 425px) {
+        font-size: 14px;
+    }
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 24px;
+
+    @media (max-width: 1024px) {
+        margin-bottom: 16px;
+        flex-wrap: wrap;
+    }
+}
+
+button {
+    padding: 3px 30px;
+    height: 25px;
+    background: variables.$saumon;
+    min-width: 115px;
+    @include mixins.montserrat-style(700);
+    font-size: 14px;
+    border-radius: 10px;
+    border: 0px solid;
+    color: white;
+
+    @media (max-width: 1024px) {
+        font-size: 10px;
+        min-width: 84px;
+    }
+}
+
+.secondInfos {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 1024px) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.host {
+    flex-direction: row;
+    display: flex;
+    margin: 24px 0px 21px 0px;
+    align-items: center;
+
+    @media (max-width: 1024px) {
+        margin-bottom: 13px;
+        gap: 10px;
+        margin-top: 0px;
+    }
+}
+
+.hostPicture {
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
 }
