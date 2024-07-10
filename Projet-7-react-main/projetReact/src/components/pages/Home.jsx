@@ -1,5 +1,5 @@
-import Thumb from "../Thumb";
-import appartement from "../../data.json";
+import Card from "../Card";
+import apartment from "../../data.json";
 import banner from "../../images/banner.png";
 const Home = () => {
     return (
@@ -9,7 +9,7 @@ const Home = () => {
                 <h1>Chez vous, partout et ailleurs</h1>
             </div>
             <div className="gallery">
-                <Thumb appartement={appartement}/>
+                <Card apartment={apartment}/>
             </div>
         </div>
     );

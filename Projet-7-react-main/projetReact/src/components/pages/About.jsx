@@ -1,9 +1,9 @@
 
-import Dropdowns from "../Dropdowns";
+import Collapses from "../Collapse";
 const About = () => {
     return (
     <div>
-<Dropdowns />
+<Collapses />
       </div>
     );
   };
