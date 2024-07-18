@@ -39,8 +39,6 @@ const Rating = ({ rating }) => {
       );
     }
   }
-
   return <div className="rating">{stars}</div>;
 };
-
 export default Rating;
